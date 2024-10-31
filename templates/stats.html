@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Statistics</h1>
+        <div class="stats">
+            <p><strong>Words Completed:</strong> {{ player_info['words_completed'] }}</p>
+            <p><strong>Your Attempts Used:</strong> {{ player_info['attempts_used'] }}</p>
+            <p><strong>Total Attempts:</strong> {{ player_info['total_attempts'] }}</p>
+            <p><strong>Game Outcome:</strong> {% if player_info['won'] %}Won{% else %}Lost{% endif %}</p>
+            <p><strong>Machine's Optimal Attempts:</strong> {{ machine_attempts }}</p>
+        </div>
+        <a href="/" class="button">Play Again</a>
+    </div>
+</body>
+</html>

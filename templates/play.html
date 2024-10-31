@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman - Play</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        <p>Word: {{ word }}</p> <!-- Display the current guessed word -->
+        <p>Remaining attempts: {{ attempts }}</p>
+        <form method="post" action="/play">
+            <label>Enter a letter:</label>
+            <input type="text" name="letter" maxlength="1" required>
+            <button type="submit">Guess</button>
+        </form>
+
+        <form method="post" action="/play">
+            <button type="submit" name="finalize" value="1">End Game & View Stats</button>
+        </form>
+    </div>
+</body>
+</html>
