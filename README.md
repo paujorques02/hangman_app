@@ -1,3 +1,9 @@
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Docker Version](https://img.shields.io/badge/docker-20.10-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/paujorques02/hangman)
+
+
 # Hangman App
 
 This repository contains a Flask-based web application that lets users play a word guessing game. The app generates random words and allows users to select different difficulty levels. Players can make attempts and receive feedback on their guesses until they complete the word.
